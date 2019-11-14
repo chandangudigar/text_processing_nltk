@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Homepage</title>
+</head>
+
+<body>
+    <header></header>
+    <div class="container">
+        <section>
+            <h1>Answer-Script Evaluation</h1>
+            <h2>Welcome <span id="tags">{{ user }}</span></h2>
+        </section>
+
+        <section>
+            <div class="question-box">
+                <h2><span id="tags">Question:</span> What is cloud computing ? Explain.</h2>
+            </div>
+        </section>
+
+        <section>
+
+            <form action="http://localhost:5000/execute" method="POST">
+                <textarea name="text" id="text" rows="15" cols="100" required></textarea>
+                <br>
+                <button type="submit" style="color:black">Submit</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>
